@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
-  protect_from_forgery except: :index 
+  protect_from_forgery except: :index
 
   # GET /users
   def index
