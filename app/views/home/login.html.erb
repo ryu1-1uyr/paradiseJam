@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>login</h1>
+
+<p><%=  @error %></p>
+
+<form action="/login" method="post">
+  <input type="email" name="addles" placeholder="addles" />
+  <input type="password" name="pwd" placeholder="pwd">
+  <input type="submit">
+</form>
+<p>kotti</p>
+<%= form_tag("/login" , method: :post ) do %>
+  email:<input type="email" name="addles"></input>
+  pwd:<input type="password" name="pwd">
+  <input type="submit" value="login">
+<% end %>
+
+<%= session[:user_id] %>
+
+</body>
+</html>

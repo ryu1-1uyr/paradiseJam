@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  get 'home/top'
+  get '/register' => 'home#register'
+  get '/login' => 'home#login'
+  post '/login' => 'home#login'
+
+  get '/mypage/:id' => 'home#test'
+
   resources :every_params
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
