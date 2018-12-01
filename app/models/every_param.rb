@@ -1,0 +1,2 @@
+class EveryParam < ApplicationRecord
+end
