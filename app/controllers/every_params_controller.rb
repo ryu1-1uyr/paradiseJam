@@ -17,6 +17,8 @@ class EveryParamsController < ApplicationController
   def create
     @every_param = EveryParam.new(every_param_params)
 
+    #このままだと、走った距離がそのままDBにはいるよ
+
     if @every_param.save
       render json: @every_param, status: :created, location: @every_param
     else
